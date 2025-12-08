@@ -37,6 +37,7 @@ Transform:
   - {fileID: 3396627667668261122}
   - {fileID: 3052703990254579878}
   - {fileID: 1505665816783951249}
+  - {fileID: 8851935151571766452}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &2247825786652192760
@@ -56,8 +57,6 @@ MonoBehaviour:
   - {fileID: 3778186650373606626}
   isStartRoom: 0
   isEndRoom: 0
-  isSidePathEntrance: 0
-  isSidePathEnd: 0
   spawnPoint: {fileID: 0}
 --- !u!114 &7141710354776389301
 MonoBehaviour:
@@ -1717,6 +1716,68 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 6954531691785998512, guid: cf8443763fc34314490f8a3e2f94dd37, type: 3}
   m_PrefabInstance: {fileID: 4510144829296742719}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4672240333378053713
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 9070901706923425245}
+    m_Modifications:
+    - target: {fileID: 4183639316166798053, guid: 3d5b6c02b64e84b59a66dfb6ba32d33b, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183639316166798053, guid: 3d5b6c02b64e84b59a66dfb6ba32d33b, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183639316166798053, guid: 3d5b6c02b64e84b59a66dfb6ba32d33b, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183639316166798053, guid: 3d5b6c02b64e84b59a66dfb6ba32d33b, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183639316166798053, guid: 3d5b6c02b64e84b59a66dfb6ba32d33b, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183639316166798053, guid: 3d5b6c02b64e84b59a66dfb6ba32d33b, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183639316166798053, guid: 3d5b6c02b64e84b59a66dfb6ba32d33b, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183639316166798053, guid: 3d5b6c02b64e84b59a66dfb6ba32d33b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183639316166798053, guid: 3d5b6c02b64e84b59a66dfb6ba32d33b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4183639316166798053, guid: 3d5b6c02b64e84b59a66dfb6ba32d33b, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8955773515998758385, guid: 3d5b6c02b64e84b59a66dfb6ba32d33b, type: 3}
+      propertyPath: m_Name
+      value: Catwalk Platform
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 3d5b6c02b64e84b59a66dfb6ba32d33b, type: 3}
+--- !u!4 &8851935151571766452 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4183639316166798053, guid: 3d5b6c02b64e84b59a66dfb6ba32d33b, type: 3}
+  m_PrefabInstance: {fileID: 4672240333378053713}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4787086295969316581
 PrefabInstance:
