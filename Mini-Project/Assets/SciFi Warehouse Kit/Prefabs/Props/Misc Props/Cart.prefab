@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 2654893242503987612}
   - component: {fileID: 54439717729162364}
   - component: {fileID: 638539208286154352}
+  - component: {fileID: 2978710001417475973}
   m_Layer: 0
   m_Name: Cart
   m_TagString: Untagged
@@ -122,7 +123,7 @@ Rigidbody:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8170962087039567002}
   serializedVersion: 5
-  m_Mass: 1
+  m_Mass: 15
   m_LinearDamping: 0
   m_AngularDamping: 0.05
   m_CenterOfMass: {x: 0, y: 0, z: 0}
@@ -162,3 +163,17 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1.3987715, y: 0.99934554, z: 0.9738974}
   m_Center: {x: -0.085136175, y: 0.4993497, z: 0.0000008940697}
+--- !u!114 &2978710001417475973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8170962087039567002}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 877b2d34859544ed7b9f1859dc74d5be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PropFallDestroyer
+  destroyBelowY: -20
+  initialDelay: 1

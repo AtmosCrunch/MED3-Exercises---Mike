@@ -394,8 +394,8 @@ public class RoomManager : MonoBehaviour
             
             if (validPositionFound)
             {
-                // Snap to floor
-                Vector3 finalPosition = SnapToFloor(propPosition, room);
+                // Spawn above floor - gravity will handle the rest (no snapping needed with Rigidbody)
+                Vector3 finalPosition = new Vector3(propPosition.x, roomCenter.y + 2f, propPosition.z);
                 GameObject prop = Instantiate(propPrefab, finalPosition, Quaternion.Euler(0, Random.Range(0f, 360f), 0), room.transform);
                 
                 // Add physics if enabled
@@ -473,6 +473,11 @@ public class RoomManager : MonoBehaviour
         {
             BoxCollider col = prop.AddComponent<BoxCollider>();
         }
+        
+        // Add fall destroyer to clean up props that spawn outside rooms
+        PropFallDestroyer fallDestroyer = prop.AddComponent<PropFallDestroyer>();
+        fallDestroyer.destroyBelowY = -50f; // Destroy if falls below Y = -50
+        fallDestroyer.initialDelay = 1f;
     }
 
     /// <summary>
@@ -550,7 +555,8 @@ public class RoomManager : MonoBehaviour
             // Check if valid
             if (IsValidPropPosition(cornerPos, placedPropPositions, room))
             {
-                Vector3 finalPos = SnapToFloor(cornerPos, room);
+                // Spawn above floor - gravity will settle it
+                Vector3 finalPos = new Vector3(cornerPos.x, room.transform.position.y + 2f, cornerPos.z);
                 GameObject cornerProp = cornerPrefabs[Random.Range(0, cornerPrefabs.Length)];
                 GameObject prop = Instantiate(cornerProp, finalPos, Quaternion.identity, room.transform);
                 
@@ -588,7 +594,8 @@ public class RoomManager : MonoBehaviour
             // Check if valid
             if (IsValidPropPosition(propPos, placedPropPositions, room))
             {
-                Vector3 finalPos = SnapToFloor(propPos, room);
+                // Spawn above floor - gravity will settle it
+                Vector3 finalPos = new Vector3(propPos.x, room.transform.position.y + 2f, propPos.z);
                 GameObject doorProp = doorPrefabs[Random.Range(0, doorPrefabs.Length)];
                 GameObject prop = Instantiate(doorProp, finalPos, Quaternion.identity, room.transform);
                 
