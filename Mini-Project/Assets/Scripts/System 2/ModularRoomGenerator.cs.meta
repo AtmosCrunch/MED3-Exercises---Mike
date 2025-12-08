@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: f3ee798343a9a432494ddac07a651d7f
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - floorPrefab: {instanceID: 0}
+  - wallPrefab: {instanceID: 0}
+  - doorPrefab: {instanceID: 0}
+  - cornerPrefab: {instanceID: 0}
+  - playerPrefab: {fileID: 8710979790456463705, guid: 7cf2427080426495088cf0098248690e, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

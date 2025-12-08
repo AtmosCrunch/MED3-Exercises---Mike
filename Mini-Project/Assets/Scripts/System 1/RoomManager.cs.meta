@@ -1,0 +1,14 @@
+fileFormatVersion: 2
+guid: b7031d618698f464a9ee10abd5b2917c
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - startRoomPrefab: {fileID: 633038030907398111, guid: 29b71a6245a85404090b7492c933fb78, type: 3}
+  - endRoomPrefab: {fileID: 1548425344904880105, guid: bb90a9e3d2f1b48e49542b6f48e796cb, type: 3}
+  - playerPrefab: {fileID: 8710979790456463705, guid: 7cf2427080426495088cf0098248690e, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

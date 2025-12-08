@@ -1,0 +1,72 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &4873499616174138335
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 8841315723256168597}
+  - component: {fileID: 4972685371584779419}
+  m_Layer: 0
+  m_Name: RoomManager
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &8841315723256168597
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4873499616174138335}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 34.03671, y: 1.09018, z: 39.84999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4972685371584779419
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4873499616174138335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b7031d618698f464a9ee10abd5b2917c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::RoomManager
+  startRoomPrefab: {fileID: 633038030907398111, guid: 29b71a6245a85404090b7492c933fb78, type: 3}
+  roomPrefabs:
+  - {fileID: 473148620813792220, guid: f7ae4ba0e753341758f6b09c73e966d8, type: 3}
+  - {fileID: 39372330228357850, guid: 08042ee799a2a4d45bcb6bb31bd3e793, type: 3}
+  - {fileID: 1652542849564943598, guid: 754b427474ead423e93cd639f5115d32, type: 3}
+  - {fileID: 760685677630450194, guid: cd7cd2b54c3f84a6ebacf95c3bb622b9, type: 3}
+  - {fileID: 1893692569670141471, guid: 7e068ba2792b540ec8c4e7f4284868d8, type: 3}
+  endRoomPrefab: {fileID: 1548425344904880105, guid: bb90a9e3d2f1b48e49542b6f48e796cb, type: 3}
+  sidePathEntrancePrefab: {fileID: 39372330228357850, guid: 19f1fa1d14ec84a45b6f7ff44103ce4a, type: 3}
+  sidePathRoomPrefabs: []
+  sidePathEndRooms: []
+  sidePathChance: 0.5
+  minSidePathLength: 1
+  maxSidePathLength: 3
+  propPrefabs:
+  - {fileID: 439239393980121046, guid: 1e3974e3db8c48c41b2604d2478e7e9e, type: 3}
+  - {fileID: 4921675115321883647, guid: e2fdcaac11701fe438724a8a8b3a76c5, type: 3}
+  - {fileID: 387364091424724237, guid: aedebdaeae12a6743b39120d2f5156b0, type: 3}
+  - {fileID: 1102363584748082429, guid: 528f6c40ba01da34f96f492e501fd927, type: 3}
+  - {fileID: 8170962087039567002, guid: 126b2c575cf932341a8f0414ccd5b254, type: 3}
+  - {fileID: 9119854835688774015, guid: 300abc4d244c9784cb330753dcf797e4, type: 3}
+  - {fileID: 2751521506394663254, guid: 703b0b9baff312645a73bd13e1f10a5e, type: 3}
+  minPropsPerRoom: 2
+  maxPropsPerRoom: 5
+  playerPrefab: {fileID: 8710979790456463705, guid: 7cf2427080426495088cf0098248690e, type: 3}
+  endRoomObjectPrefab: {fileID: 7790725680608172790, guid: abf7f58dae03a4da1a790302aeb5c23a, type: 3}
