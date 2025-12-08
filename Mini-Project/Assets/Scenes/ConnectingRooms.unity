@@ -180,11 +180,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7cf2427080426495088cf0098248690e, type: 3}
---- !u!1 &330832850 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8710979790456463705, guid: 7cf2427080426495088cf0098248690e, type: 3}
-  m_PrefabInstance: {fileID: 330832849}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &410087039
 GameObject:
   m_ObjectHideFlags: 0
@@ -393,9 +388,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::GameObjectScreenshot
   screenshotCamera: {fileID: 1344367079}
-  targetObject: {fileID: 330832850}
-  imageWidth: 1920
-  imageHeight: 1080
+  targetObject: {fileID: 0}
+  imageWidth: 1080
+  imageHeight: 1920
   transparentBackground: 1
   folderName: Screenshots
   filePrefix: screenshot_
@@ -502,13 +497,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1344367075}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.08287085, y: 0.17692743, z: -0.014912721, w: 0.98061556}
-  m_LocalPosition: {x: -14.868, y: 0.371, z: -17.199}
+  m_LocalRotation: {x: 0.06509707, y: 0.6323139, z: -0.053403605, w: 0.7701231}
+  m_LocalPosition: {x: 12, y: -3, z: -73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 9.66, y: 78.776, z: 0.004}
 --- !u!1001 &301936380991245238
 PrefabInstance:
   m_ObjectHideFlags: 0
