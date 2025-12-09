@@ -48,6 +48,7 @@
   <ItemGroup>
     <Compile Include="Assets/Scripts/System 3/LevelGenerator.cs" />
     <Compile Include="Assets/Scripts/System 2/SnapModule.cs" />
+    <Compile Include="Assets/Scripts/System 1/SoundManager.cs" />
     <Compile Include="Assets/Scripts/System 1/Propfalldestroyer.cs" />
     <Compile Include="Assets/SciFi Warehouse Kit/Demo/Scripts/PushPhysics.cs" />
     <Compile Include="Assets/Scripts/System 2/ModularRoomGenerator.cs" />
@@ -56,6 +57,7 @@
     <Compile Include="Assets/SciFi Warehouse Kit/Demo/Scripts/PlayRandomSound.cs" />
     <Compile Include="Assets/Scripts/System 1/PlayerController.cs" />
     <Compile Include="Assets/TutorialInfo/Scripts/Readme.cs" />
+    <Compile Include="Assets/Scripts/System 1/EndRoomVisualEffects.cs" />
     <Compile Include="Assets/Scripts/System 1/Room.cs" />
     <Compile Include="Assets/Scripts/System 1/RoomManager.cs" />
     <Compile Include="Assets/SciFi Warehouse Kit/Demo/Scripts/MouseComponent.cs" />
