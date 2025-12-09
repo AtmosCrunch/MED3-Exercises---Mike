@@ -46,26 +46,29 @@
     <Analyzer Include="/Applications/Unity/Hub/Editor/6000.2.9f1/Unity.app/Contents/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets/Scripts/System 1/Room Generation and managers/EndRoomInteraction.cs" />
+    <Compile Include="Assets/Scripts/System 1/Room Generation and managers/Room.cs" />
     <Compile Include="Assets/Scripts/System 3/LevelGenerator.cs" />
     <Compile Include="Assets/Scripts/System 2/SnapModule.cs" />
-    <Compile Include="Assets/Scripts/System 1/SoundManager.cs" />
-    <Compile Include="Assets/Scripts/System 1/Propfalldestroyer.cs" />
+    <Compile Include="Assets/Scripts/System 1/Utility/Propfalldestroyer.cs" />
+    <Compile Include="Assets/Scripts/System 1/Room Generation and managers/RoomManager.cs" />
     <Compile Include="Assets/SciFi Warehouse Kit/Demo/Scripts/PushPhysics.cs" />
+    <Compile Include="Assets/Scripts/System 1/Player Scripts/Health.cs" />
+    <Compile Include="Assets/Scripts/System 1/Utility/GameObjectScreenshotEditor.cs" />
+    <Compile Include="Assets/Scripts/System 1/Room Generation and managers/EndRoomVisualEffects.cs" />
+    <Compile Include="Assets/Scripts/System 1/Enemy Scripts/EnemyAI.cs" />
+    <Compile Include="Assets/Scripts/System 1/Player Scripts/PlayerController.cs" />
     <Compile Include="Assets/Scripts/System 2/ModularRoomGenerator.cs" />
-    <Compile Include="Assets/Scripts/System 1/GameObjectScreenshotEditor.cs" />
-    <Compile Include="Assets/Scripts/System 1/GameObjectScreenshot.cs" />
+    <Compile Include="Assets/Scripts/System 1/Room Generation and managers/SoundManager.cs" />
     <Compile Include="Assets/SciFi Warehouse Kit/Demo/Scripts/PlayRandomSound.cs" />
-    <Compile Include="Assets/Scripts/System 1/PlayerController.cs" />
     <Compile Include="Assets/TutorialInfo/Scripts/Readme.cs" />
-    <Compile Include="Assets/Scripts/System 1/EndRoomVisualEffects.cs" />
-    <Compile Include="Assets/Scripts/System 1/Room.cs" />
-    <Compile Include="Assets/Scripts/System 1/RoomManager.cs" />
+    <Compile Include="Assets/Scripts/System 1/Utility/GameObjectScreenshot.cs" />
     <Compile Include="Assets/SciFi Warehouse Kit/Demo/Scripts/MouseComponent.cs" />
+    <Compile Include="Assets/Scripts/System 1/Player Scripts/PlayerShooting.cs" />
     <Compile Include="Assets/SciFi Warehouse Kit/Demo/Scripts/LightFlicker.cs" />
     <Compile Include="Assets/Scripts/System 3/Door.cs" />
     <Compile Include="Assets/SciFi Warehouse Kit/Demo/Scripts/PlayerMovement.cs" />
     <Compile Include="Assets/Scripts/System 3/RoomInfo.cs" />
-    <Compile Include="Assets/Scripts/System 1/EndRoomInteraction.cs" />
     <Compile Include="Assets/Scripts/System 2/RoomGenerator.cs" />
     <Reference Include="UnityEngine">
       <HintPath>/Applications/Unity/Hub/Editor/6000.2.9f1/Unity.app/Contents/PlaybackEngines/MacStandaloneSupport/Variations/mono/Managed/UnityEngine.dll</HintPath>

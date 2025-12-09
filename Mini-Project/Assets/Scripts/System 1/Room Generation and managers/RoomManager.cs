@@ -52,6 +52,23 @@ public class RoomManager : MonoBehaviour
 
     [Header("Player Settings")]
     public GameObject playerPrefab;
+    
+    [Header("Enemy Settings")]
+    [Tooltip("Enemy prefabs to spawn")]
+    public GameObject[] enemyPrefabs;
+    
+    [Tooltip("Spawn enemies in rooms")]
+    public bool spawnEnemies = true;
+    
+    [Tooltip("Min/max enemies per room")]
+    public int minEnemiesPerRoom = 1;
+    public int maxEnemiesPerRoom = 3;
+    
+    [Tooltip("Don't spawn enemies in start room")]
+    public bool skipStartRoom = true;
+    
+    [Tooltip("Don't spawn enemies in end room")]
+    public bool skipEndRoom = true;
 
     [Header("End Room Object")]
     public GameObject endRoomObjectPrefab;
@@ -434,6 +451,12 @@ public class RoomManager : MonoBehaviour
         {
             PlaceDoorProps(room, placedPropPositions);
         }
+        
+        // Spawn enemies
+        if (spawnEnemies && enemyPrefabs != null && enemyPrefabs.Length > 0)
+        {
+            SpawnEnemiesInRoom(room);
+        }
     }
 
     /// <summary>
@@ -688,6 +711,73 @@ public class RoomManager : MonoBehaviour
         }
         
         return true;
+    }
+    
+    /// <summary>
+    /// Spawns enemies in a room at designated spawn points
+    /// </summary>
+    void SpawnEnemiesInRoom(Room room)
+    {
+        // Skip if configured to skip this room type
+        if (room.isStartRoom && skipStartRoom) return;
+        if (room.isEndRoom && skipEndRoom) return;
+        
+        // Use spawn points if available, otherwise use random positions
+        if (room.enemySpawnPoints != null && room.enemySpawnPoints.Length > 0)
+        {
+            // Determine how many enemies to spawn
+            int enemyCount = Random.Range(minEnemiesPerRoom, maxEnemiesPerRoom + 1);
+            enemyCount = Mathf.Min(enemyCount, room.enemySpawnPoints.Length); // Don't exceed spawn points
+            
+            // Randomly select spawn points
+            List<Transform> availableSpawns = new List<Transform>(room.enemySpawnPoints);
+            
+            for (int i = 0; i < enemyCount; i++)
+            {
+                if (availableSpawns.Count == 0) break;
+                
+                // Pick random spawn point
+                int spawnIndex = Random.Range(0, availableSpawns.Count);
+                Transform spawnPoint = availableSpawns[spawnIndex];
+                availableSpawns.RemoveAt(spawnIndex);
+                
+                // Pick random enemy prefab
+                GameObject enemyPrefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
+                
+                // Spawn enemy
+                GameObject enemy = Instantiate(enemyPrefab, spawnPoint.position, spawnPoint.rotation, room.transform);
+                enemy.name = $"Enemy_{i}";
+                
+                Debug.Log($"  Spawned enemy at spawn point in {room.name}");
+            }
+        }
+        else
+        {
+            // No spawn points defined - spawn at random positions in room
+            int enemyCount = Random.Range(minEnemiesPerRoom, maxEnemiesPerRoom + 1);
+            Bounds roomBounds = GetRoomBounds(room.gameObject);
+            Vector3 roomCenter = room.transform.position;
+            
+            float safeWidth = Mathf.Max(2f, roomBounds.size.x - (wallBuffer * 2));
+            float safeDepth = Mathf.Max(2f, roomBounds.size.z - (wallBuffer * 2));
+            
+            for (int i = 0; i < enemyCount; i++)
+            {
+                // Random position in room
+                float randomX = Random.Range(-safeWidth / 2, safeWidth / 2);
+                float randomZ = Random.Range(-safeDepth / 2, safeDepth / 2);
+                Vector3 spawnPos = roomCenter + new Vector3(randomX, 1f, randomZ);
+                
+                // Pick random enemy prefab
+                GameObject enemyPrefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
+                
+                // Spawn enemy
+                GameObject enemy = Instantiate(enemyPrefab, spawnPos, Quaternion.Euler(0, Random.Range(0f, 360f), 0), room.transform);
+                enemy.name = $"Enemy_{i}";
+                
+                Debug.Log($"  Spawned enemy at random position in {room.name}");
+            }
+        }
     }
 
     void SpawnPlayerInStartRoom()

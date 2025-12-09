@@ -52,12 +52,8 @@ MonoBehaviour:
   - {fileID: 760685677630450194, guid: cd7cd2b54c3f84a6ebacf95c3bb622b9, type: 3}
   - {fileID: 1893692569670141471, guid: 7e068ba2792b540ec8c4e7f4284868d8, type: 3}
   endRoomPrefab: {fileID: 1548425344904880105, guid: bb90a9e3d2f1b48e49542b6f48e796cb, type: 3}
-  sidePathEntrancePrefab: {fileID: 39372330228357850, guid: 19f1fa1d14ec84a45b6f7ff44103ce4a, type: 3}
-  sidePathRoomPrefabs: []
-  sidePathEndRooms: []
-  sidePathChance: 0.5
-  minSidePathLength: 1
-  maxSidePathLength: 3
+  minRoomCount: 4
+  maxRoomCount: 15
   propPrefabs:
   - {fileID: 439239393980121046, guid: 1e3974e3db8c48c41b2604d2478e7e9e, type: 3}
   - {fileID: 4921675115321883647, guid: e2fdcaac11701fe438724a8a8b3a76c5, type: 3}
@@ -66,7 +62,25 @@ MonoBehaviour:
   - {fileID: 8170962087039567002, guid: 126b2c575cf932341a8f0414ccd5b254, type: 3}
   - {fileID: 9119854835688774015, guid: 300abc4d244c9784cb330753dcf797e4, type: 3}
   - {fileID: 2751521506394663254, guid: 703b0b9baff312645a73bd13e1f10a5e, type: 3}
-  minPropsPerRoom: 2
-  maxPropsPerRoom: 5
+  minPropsPerRoom: 5
+  maxPropsPerRoom: 20
+  minPropSpacing: 1
+  wallBuffer: 2
+  maxPropPlacementAttempts: 70
+  usePhysicsCheck: 1
+  propCheckRadius: 0.5
+  makePropsPhysical: 1
+  propMass: 10
+  propDrag: 2
+  palletPrefabs: []
+  stackablePrefabs: []
+  minItemsPerPallet: 1
+  maxItemsPerPallet: 3
+  cornerPrefabs:
+  - {fileID: 2751521506394663254, guid: 703b0b9baff312645a73bd13e1f10a5e, type: 3}
+  doorPrefabs:
+  - {fileID: 9119854835688774015, guid: 300abc4d244c9784cb330753dcf797e4, type: 3}
   playerPrefab: {fileID: 8710979790456463705, guid: 7cf2427080426495088cf0098248690e, type: 3}
   endRoomObjectPrefab: {fileID: 7790725680608172790, guid: abf7f58dae03a4da1a790302aeb5c23a, type: 3}
+  horizontalCollisionThreshold: 1.5
+  verticalCollisionThreshold: 3

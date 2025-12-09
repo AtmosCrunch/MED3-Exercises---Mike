@@ -571,85 +571,17 @@ PrefabInstance:
       value: RoomManager
       objectReference: {fileID: 0}
     - target: {fileID: 4972685371584779419, guid: 9b7130f5f76f94b2294af893706c82c7, type: 3}
-      propertyPath: wallBuffer
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 4972685371584779419, guid: 9b7130f5f76f94b2294af893706c82c7, type: 3}
-      propertyPath: maxRoomCount
-      value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 4972685371584779419, guid: 9b7130f5f76f94b2294af893706c82c7, type: 3}
-      propertyPath: maxSideRooms
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 4972685371584779419, guid: 9b7130f5f76f94b2294af893706c82c7, type: 3}
-      propertyPath: minRoomCount
+      propertyPath: maxEnemiesPerRoom
       value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4972685371584779419, guid: 9b7130f5f76f94b2294af893706c82c7, type: 3}
-      propertyPath: mainPathLength
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4972685371584779419, guid: 9b7130f5f76f94b2294af893706c82c7, type: 3}
-      propertyPath: minPropSpacing
+      propertyPath: enemyPrefabs.Array.size
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4972685371584779419, guid: 9b7130f5f76f94b2294af893706c82c7, type: 3}
-      propertyPath: maxPropsPerRoom
-      value: 20
-      objectReference: {fileID: 0}
-    - target: {fileID: 4972685371584779419, guid: 9b7130f5f76f94b2294af893706c82c7, type: 3}
-      propertyPath: minPropsPerRoom
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4972685371584779419, guid: 9b7130f5f76f94b2294af893706c82c7, type: 3}
-      propertyPath: endRoomObjectPrefab
+      propertyPath: 'enemyPrefabs.Array.data[0]'
       value: 
-      objectReference: {fileID: 7790725680608172790, guid: abf7f58dae03a4da1a790302aeb5c23a, type: 3}
-    - target: {fileID: 4972685371584779419, guid: 9b7130f5f76f94b2294af893706c82c7, type: 3}
-      propertyPath: doorPrefabs.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4972685371584779419, guid: 9b7130f5f76f94b2294af893706c82c7, type: 3}
-      propertyPath: roomPrefabs.Array.size
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 4972685371584779419, guid: 9b7130f5f76f94b2294af893706c82c7, type: 3}
-      propertyPath: cornerPrefabs.Array.size
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 4972685371584779419, guid: 9b7130f5f76f94b2294af893706c82c7, type: 3}
-      propertyPath: maxPropPlacementAttempts
-      value: 70
-      objectReference: {fileID: 0}
-    - target: {fileID: 4972685371584779419, guid: 9b7130f5f76f94b2294af893706c82c7, type: 3}
-      propertyPath: 'doorPrefabs.Array.data[0]'
-      value: 
-      objectReference: {fileID: 9119854835688774015, guid: 300abc4d244c9784cb330753dcf797e4, type: 3}
-    - target: {fileID: 4972685371584779419, guid: 9b7130f5f76f94b2294af893706c82c7, type: 3}
-      propertyPath: 'roomPrefabs.Array.data[5]'
-      value: 
-      objectReference: {fileID: 39372330228357850, guid: 19f1fa1d14ec84a45b6f7ff44103ce4a, type: 3}
-    - target: {fileID: 4972685371584779419, guid: 9b7130f5f76f94b2294af893706c82c7, type: 3}
-      propertyPath: 'roomPrefabs.Array.data[6]'
-      value: 
-      objectReference: {fileID: 39372330228357850, guid: b61130021d5a94fcfb403987abec4730, type: 3}
-    - target: {fileID: 4972685371584779419, guid: 9b7130f5f76f94b2294af893706c82c7, type: 3}
-      propertyPath: 'roomPrefabs.Array.data[7]'
-      value: 
-      objectReference: {fileID: 473148620813792220, guid: 1aa76800afbb547e0a9dffa15dc26d3b, type: 3}
-    - target: {fileID: 4972685371584779419, guid: 9b7130f5f76f94b2294af893706c82c7, type: 3}
-      propertyPath: 'roomPrefabs.Array.data[8]'
-      value: 
-      objectReference: {fileID: 473148620813792220, guid: 1aa76800afbb547e0a9dffa15dc26d3b, type: 3}
-    - target: {fileID: 4972685371584779419, guid: 9b7130f5f76f94b2294af893706c82c7, type: 3}
-      propertyPath: 'cornerPrefabs.Array.data[0]'
-      value: 
-      objectReference: {fileID: 2751521506394663254, guid: 703b0b9baff312645a73bd13e1f10a5e, type: 3}
-    - target: {fileID: 4972685371584779419, guid: 9b7130f5f76f94b2294af893706c82c7, type: 3}
-      propertyPath: 'cornerPrefabs.Array.data[1]'
-      value: 
-      objectReference: {fileID: 9119854835688774015, guid: 300abc4d244c9784cb330753dcf797e4, type: 3}
+      objectReference: {fileID: 8710979790456463705, guid: a5a2c2512ec96408faa070a32e73cd21, type: 3}
     - target: {fileID: 8841315723256168597, guid: 9b7130f5f76f94b2294af893706c82c7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 34.03671

@@ -152,6 +152,8 @@ GameObject:
   - component: {fileID: 700844660010349624}
   - component: {fileID: 9198874944717772948}
   - component: {fileID: -5252241085383367904}
+  - component: {fileID: 7943810525198781852}
+  - component: {fileID: 3660600254825856138}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -408,6 +410,56 @@ Rigidbody:
   m_Interpolate: 1
   m_Constraints: 112
   m_CollisionDetection: 1
+--- !u!114 &7943810525198781852
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8710979790456463705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6a1fef3103d9d46f59f00db11bf51660, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerShooting
+  damage: 25
+  range: 100
+  fireRate: 0.5
+  hitForce: 10
+  gunTransform: {fileID: 7182494139584063803}
+  playerCamera: {fileID: 7813269512872379796}
+  muzzleFlash: {fileID: 7516004826788876446, guid: fe8624b8239b6d44e8dba978b745de2a, type: 3}
+  impactEffect: {fileID: 524362925323473342, guid: f23ca344d22b7d84b848fb882e92bf51, type: 3}
+  impactEffectLifetime: 2
+  shootSound: {fileID: 8300000, guid: 4dba877eb998f4893814c5ad46b4733c, type: 3}
+  shootVolume: 0.7
+--- !u!114 &3660600254825856138
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8710979790456463705}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab6984992445e429d985e43de69b4ac4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Health
+  maxHealth: 100
+  currentHealth: 0
+  onDamaged:
+    m_PersistentCalls:
+      m_Calls: []
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
+  destroyOnDeath: 0
+  destroyDelay: 2
+  disableOnDeath: 0
+  triggerDeathEffects: 1
+  visualEffects: {fileID: 0}
+  regenerateLevelOnDeath: 1
+  roomManager: {fileID: 4972685371584779419, guid: 9b7130f5f76f94b2294af893706c82c7, type: 3}
 --- !u!1001 &3355773364447272390
 PrefabInstance:
   m_ObjectHideFlags: 0
