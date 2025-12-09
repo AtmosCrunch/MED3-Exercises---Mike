@@ -424,7 +424,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerShooting
   damage: 25
   range: 100
-  fireRate: 0.5
+  fireRate: 0.2
   hitForce: 10
   gunTransform: {fileID: 7182494139584063803}
   playerCamera: {fileID: 7813269512872379796}
@@ -433,6 +433,7 @@ MonoBehaviour:
   impactEffectLifetime: 2
   shootSound: {fileID: 8300000, guid: 4dba877eb998f4893814c5ad46b4733c, type: 3}
   shootVolume: 0.7
+  audioFadeOutTime: 0.4
 --- !u!114 &3660600254825856138
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -453,6 +454,9 @@ MonoBehaviour:
   onDeath:
     m_PersistentCalls:
       m_Calls: []
+  flashOnDamage: 1
+  flashDuration: 0.1
+  flashColor: {r: 1, g: 0, b: 0, a: 1}
   destroyOnDeath: 0
   destroyDelay: 2
   disableOnDeath: 0
@@ -460,6 +464,10 @@ MonoBehaviour:
   visualEffects: {fileID: 0}
   regenerateLevelOnDeath: 1
   roomManager: {fileID: 4972685371584779419, guid: 9b7130f5f76f94b2294af893706c82c7, type: 3}
+  deathSound: {fileID: 0}
+  deathSoundVolume: 0.7
+  deathParticleEffect: {fileID: 0}
+  particleLifetime: 3
 --- !u!1001 &3355773364447272390
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -604,7 +612,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 741216ffd6fbf40c9aabecc14f9c1786, type: 3}
       propertyPath: m_Name
-      value: uploads_files_3208104_vr
+      value: Sunglasses
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
