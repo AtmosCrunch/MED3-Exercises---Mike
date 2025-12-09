@@ -753,30 +753,7 @@ public class RoomManager : MonoBehaviour
         }
         else
         {
-            // No spawn points defined - spawn at random positions in room
-            int enemyCount = Random.Range(minEnemiesPerRoom, maxEnemiesPerRoom + 1);
-            Bounds roomBounds = GetRoomBounds(room.gameObject);
-            Vector3 roomCenter = room.transform.position;
-            
-            float safeWidth = Mathf.Max(2f, roomBounds.size.x - (wallBuffer * 2));
-            float safeDepth = Mathf.Max(2f, roomBounds.size.z - (wallBuffer * 2));
-            
-            for (int i = 0; i < enemyCount; i++)
-            {
-                // Random position in room
-                float randomX = Random.Range(-safeWidth / 2, safeWidth / 2);
-                float randomZ = Random.Range(-safeDepth / 2, safeDepth / 2);
-                Vector3 spawnPos = roomCenter + new Vector3(randomX, 1f, randomZ);
-                
-                // Pick random enemy prefab
-                GameObject enemyPrefab = enemyPrefabs[Random.Range(0, enemyPrefabs.Length)];
-                
-                // Spawn enemy
-                GameObject enemy = Instantiate(enemyPrefab, spawnPos, Quaternion.Euler(0, Random.Range(0f, 360f), 0), room.transform);
-                enemy.name = $"Enemy_{i}";
-                
-                Debug.Log($"  Spawned enemy at random position in {room.name}");
-            }
+            Debug.LogWarning($"  No enemy spawn points defined for {room.name} - skipping enemy spawning");
         }
     }
 

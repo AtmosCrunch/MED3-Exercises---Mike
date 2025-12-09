@@ -93,8 +93,12 @@ public class EnemyAI : MonoBehaviour
         rb.mass = 50f;
         rb.linearDamping = 2f;
         rb.angularDamping = 5f;
-        rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ;
+        rb.useGravity = true;
+        rb.isKinematic = false; // IMPORTANT: Must be false to move
+        rb.constraints = RigidbodyConstraints.FreezeRotationX | RigidbodyConstraints.FreezeRotationZ; // Only freeze tipping over
         rb.collisionDetectionMode = CollisionDetectionMode.Continuous;
+        
+        Debug.Log($"{gameObject.name} Rigidbody configured: isKinematic={rb.isKinematic}, useGravity={rb.useGravity}, constraints={rb.constraints}");
         
         // Ensure enemy has a capsule collider
         if (GetComponent<CapsuleCollider>() == null)
@@ -181,19 +185,28 @@ public class EnemyAI : MonoBehaviour
     
     void ChasePlayer(float distance)
     {
-        if (distance <= stopDistance) return;
+        if (distance <= stopDistance)
+        {
+            Debug.Log($"{gameObject.name} within stop distance ({distance:F1}m <= {stopDistance}m) - not chasing");
+            return;
+        }
         
         // Move towards player
         Vector3 direction = (player.position - transform.position).normalized;
         Vector3 movement = direction * moveSpeed * Time.deltaTime;
         
+        Debug.Log($"{gameObject.name} chasing player: moving {movement.magnitude:F3}m towards player");
+        
         if (rb != null)
         {
-            rb.MovePosition(transform.position + movement);
+            Vector3 newPos = transform.position + movement;
+            rb.MovePosition(newPos);
+            Debug.Log($"{gameObject.name} moved to {newPos}");
         }
         else
         {
             transform.position += movement;
+            Debug.LogWarning($"{gameObject.name} has no Rigidbody - using transform.position");
         }
     }
     
@@ -257,11 +270,18 @@ public class EnemyAI : MonoBehaviour
         {
             Debug.DrawLine(gunTransform.position, hit.point, Color.red, 0.5f);
             
+            // IMPORTANT: Don't shoot ourselves or other enemies
+            if (hit.collider.gameObject == gameObject)
+            {
+                Debug.Log($"{gameObject.name} almost shot itself - ignoring");
+                return;
+            }
+            
             // Check if hit player
             if (hit.collider.CompareTag("Player"))
             {
                 Health targetHealth = hit.collider.GetComponent<Health>();
-                if (targetHealth != null)
+                if (targetHealth != null && !targetHealth.IsDead())
                 {
                     targetHealth.TakeDamage(damage);
                     Debug.Log($"Enemy hit player for {damage} damage!");

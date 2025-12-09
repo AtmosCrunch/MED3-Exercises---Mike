@@ -201,7 +201,9 @@ MonoBehaviour:
   regenerateLevelOnDeath: 0
   roomManager: {fileID: 4972685371584779419, guid: 9b7130f5f76f94b2294af893706c82c7, type: 3}
   deathSound: {fileID: 8300000, guid: 99d7e9c55ce2443aa8a791200a9aa02f, type: 3}
-  deathSoundVolume: 0.7
+  deathSoundVolume: 0.915
+  deathParticleEffect: {fileID: 6510125619236422602, guid: 6d7b01bdef4c9d44596d7108af762e72, type: 3}
+  particleLifetime: 3
 --- !u!114 &3390940016534855453
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -226,7 +228,7 @@ MonoBehaviour:
   gunTransform: {fileID: 7182494139584063803}
   muzzleFlash: {fileID: 7516004826788876446, guid: fe8624b8239b6d44e8dba978b745de2a, type: 3}
   shootSound: {fileID: 8300000, guid: 4dba877eb998f4893814c5ad46b4733c, type: 3}
-  shootVolume: 0.414
+  shootVolume: 0.401
 --- !u!1001 &3355773364447272390
 PrefabInstance:
   m_ObjectHideFlags: 0

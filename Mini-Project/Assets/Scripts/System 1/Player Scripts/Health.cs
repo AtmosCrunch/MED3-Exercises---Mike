@@ -58,6 +58,13 @@ public class Health : MonoBehaviour
     [Range(0f, 1f)]
     public float deathSoundVolume = 0.7f;
     
+    [Header("Death Particles")]
+    [Tooltip("Particle effect to spawn on death")]
+    public GameObject deathParticleEffect;
+    
+    [Tooltip("How long before destroying particle effect")]
+    public float particleLifetime = 3f;
+    
     private bool isDead = false;
     private Renderer[] renderers;
     private Dictionary<Renderer, Color> originalColors = new Dictionary<Renderer, Color>();
@@ -169,6 +176,14 @@ public class Health : MonoBehaviour
         if (deathSound != null && audioSource != null)
         {
             audioSource.PlayOneShot(deathSound, deathSoundVolume);
+        }
+        
+        // Spawn death particle effect
+        if (deathParticleEffect != null)
+        {
+            GameObject particles = Instantiate(deathParticleEffect, transform.position, Quaternion.identity);
+            Destroy(particles, particleLifetime);
+            Debug.Log($"Spawned death particles for {gameObject.name}");
         }
         
         // Trigger death event
